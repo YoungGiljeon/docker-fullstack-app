@@ -1,5 +1,5 @@
 {
-    "AWSEBDOckerrinVersion": 2,
+    "AWSEBDOckerrinVersion": 3,
     "containerDefinitions": [
         {
             "name": "frontend",
