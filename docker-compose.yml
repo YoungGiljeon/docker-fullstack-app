@@ -25,6 +25,13 @@ services:
     volumes:
       - /app/node_modules
       - ./backend:/app
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: ygjeon0706
+      MYSQL_DATABASE: myapp
+      MYSQL_PORT: 3306
+
     
   # mysql:
   #   build: ./mysql
@@ -36,5 +43,5 @@ services:
   #     - ./mysql/mysql_data:/var/lib/mysql
   #     - ./mysql/sqls/:/docker-entrypoint-initdb.d/
   #   environment:
-  #     MYSQL_ROOT_PASSWORD: dudrlf00!
+  #     MYSQL_ROOT_PASSWORD: ygjeon0706
   #     MYSQL_DATABASE: myapp

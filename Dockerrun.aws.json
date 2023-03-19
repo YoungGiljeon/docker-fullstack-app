@@ -1,0 +1,33 @@
+{
+    "AWSEBDOckerrinVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "frontend",
+            "image": "ygjeon0706/docker-frontend",
+            "hostname": "frontend",
+            "essiontial": false,
+            "memory": 128
+        },
+        {
+            "name": "backend",
+            "image": "ygjeon0706/docker-backend",
+            "hostname": "backend",
+            "essiontial": false,
+            "memory": 128
+        },
+        {
+            "name": "nginx",
+            "image": "ygjeon0706/docker-nginx",
+            "hostname": "nginx",
+            "essiontial": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links": ["frontend", "backend"],
+            "memory": 128
+        }
+    ]
+}
